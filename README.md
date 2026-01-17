@@ -367,7 +367,7 @@ total_touches = sum(['1st', '2nd', '3rd', '4th', '5th'])
 │                          Role: Box-to-Box       │
 │                          Club: Y                │
 │                          Market Value: €50M     │
-|                          ...                    |
+│                          ...                    │
 ├─────────────────────────────────────────────────┤
 │  [Attribute Bar Chart]   [Touch Heatmap]        │
 │  Scoring:       45       [Pitch visualization]  │
