@@ -21,7 +21,11 @@ import cv2
 start_time = time.time()
 
 #load the DataFrame
+<<<<<<< HEAD
 players = pd.read_csv('../Data/Dataframes/players.csv')
+=======
+players = pd.read_csv('/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Dataframes/players.csv')
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
 players.sort_values(by='Rating', ascending=False, inplace=True)
 
 
@@ -29,7 +33,11 @@ players.sort_values(by='Rating', ascending=False, inplace=True)
 
 
 def crop_info():
+<<<<<<< HEAD
     directory = '../Data/Images/Informations'
+=======
+    directory = '/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/Informations'
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
     crop_height = 30
     for filename in os.listdir(directory):
         if filename.endswith('.png'):
@@ -50,7 +58,11 @@ def crop_info():
 
 
 def rotate_heatmaps():
+<<<<<<< HEAD
     directory = '../Data/Images/HeatMaps'
+=======
+    directory = '/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/HeatMaps'
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
     for filename in os.listdir(directory):
         if filename.endswith('.png'):
             filepath = os.path.join(directory, filename)
@@ -71,7 +83,11 @@ def head_shots(players):
         response = requests.get(image_url, stream=True)
 
         if response.status_code == 200:
+<<<<<<< HEAD
             save_directory = '../Data/Images/Headshots'
+=======
+            save_directory = '/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/Headshots'
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
             os.makedirs(save_directory, exist_ok=True)
             image_path = os.path.join(save_directory, f'{name}HeadShot.png')
             with open(image_path, "wb") as f:
@@ -96,7 +112,11 @@ def remove_background_all_images(directory):
             output_path = os.path.join(directory, filename)
             remove_background(input_path, output_path)
 
+<<<<<<< HEAD
 directory_path = '../Data/Images/HeadShots'
+=======
+directory_path = '/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/HeadShots'
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
 #remove_background_all_images(directory_path)
 
 
@@ -118,7 +138,11 @@ def add_background_to_all_images(directory):
             new_image = add_background(image_path)
             new_image.save(image_path)
 
+<<<<<<< HEAD
 directory_path = '../Data/Images/HeadShots'
+=======
+directory_path = '/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/HeadShots'
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
 #add_background_to_all_images(directory_path)
 
 
@@ -142,7 +166,11 @@ def add_margin_to_all_images(directory, margin_size):
             new_image = add_margin(image_path, margin_size=margin_size)
             new_image.save(image_path)
 
+<<<<<<< HEAD
 directory_path = '../Data/Images/HeadShots'
+=======
+directory_path = '/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/HeadShots'
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
 #add_margin_to_all_images(directory_path, 9)
 
 
@@ -163,7 +191,11 @@ def head_shots2(players):
             plt.yticks([])
             plt.box(False)
 
+<<<<<<< HEAD
             save_directory = '../Data/Images/Headshots'
+=======
+            save_directory = '/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/Headshots'
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
             os.makedirs(save_directory, exist_ok=True)
             player_name = player['Name'].replace(" ", "")
             plt.savefig(os.path.join(save_directory, f'{player_name}HeadShot.png'),

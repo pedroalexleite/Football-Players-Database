@@ -21,7 +21,11 @@ import cv2
 start_time = time.time()
 
 #load the DataFrame
+<<<<<<< HEAD
 players = pd.read_csv('../Data/Dataframes/players.csv')
+=======
+players = pd.read_csv('/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Dataframes/players.csv')
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
 players.sort_values(by='Rating', ascending=False, inplace=True)
 
 
@@ -33,8 +37,13 @@ def merge1(players):
         player_barplot = player['Name'].replace(" ", "")+"BarPlot.png"
         player_heatmap = player['Name'].replace(" ", "")+"HeatMap.png"
 
+<<<<<<< HEAD
         directory_barplot = "../Data/Images/BarPlots/"+player_barplot
         directory_heatmap = "../Data/Images/HeatMaps/"+player_heatmap
+=======
+        directory_barplot = "/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/BarPlots/"+player_barplot
+        directory_heatmap = "/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/HeatMaps/"+player_heatmap
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
 
         image_barplot = Image.open(directory_barplot)
         image_heatmap = Image.open(directory_heatmap)
@@ -48,7 +57,11 @@ def merge1(players):
         appended_image.paste(image_heatmap_resized, (image_barplot.width, 0))
 
         #save as an image
+<<<<<<< HEAD
         save_directory = '../Data/Images/Merge1'
+=======
+        save_directory = '/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/Merge1'
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
         os.makedirs(save_directory, exist_ok=True)
         player_name = player['Name'].replace(" ", "")
         appended_image.save(os.path.join(save_directory, f'{player_name}Merge1.png'))
@@ -64,8 +77,13 @@ def merge2(players):
         player_headshot = player['Name'].replace(" ", "") + "HeadShot.png"
         player_rating = player['Name'].replace(" ", "") + "Rating.png"
 
+<<<<<<< HEAD
         directory_headshot = "../Data/Images/HeadShots/" + player_headshot
         directory_rating = "../Data/Images/Ratings/" + player_rating
+=======
+        directory_headshot = "/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/HeadShots/" + player_headshot
+        directory_rating = "/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/Ratings/" + player_rating
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
 
         image_headshot = Image.open(directory_headshot)
         image_rating = Image.open(directory_rating)
@@ -80,7 +98,11 @@ def merge2(players):
         appended_image.paste(image_rating, (0, height_headshot))
 
         #save as an image
+<<<<<<< HEAD
         save_directory = '../Data/Images/Merge2'
+=======
+        save_directory = '/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/Merge2'
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
         os.makedirs(save_directory, exist_ok=True)
         player_name = player['Name'].replace(" ", "")
         appended_image.save(os.path.join(save_directory, f'{player_name}Merge2.png'))
@@ -96,8 +118,13 @@ def merge3(players):
         player_merge2 = player['Name'].replace(" ", "") + "Merge2.png"
         player_information = player['Name'].replace(" ", "") + "Information.png"
 
+<<<<<<< HEAD
         directory_merge2 = "../Data/Images/Merge2/" + player_merge2
         directory_information = "../Data/Images/Informations/" + player_information
+=======
+        directory_merge2 = "/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/Merge2/" + player_merge2
+        directory_information = "/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/Informations/" + player_information
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
 
         image_merge2 = Image.open(directory_merge2)
         image_information = Image.open(directory_information)
@@ -116,7 +143,11 @@ def merge3(players):
         merged_image.paste(image_information_final, (image_merge2.width, 0))
 
         #save the merged image
+<<<<<<< HEAD
         save_directory = '../Data/Images/Merge3'
+=======
+        save_directory = '/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/Merge3'
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
         os.makedirs(save_directory, exist_ok=True)
         player_name = player['Name'].replace(" ", "")
         merged_image.save(os.path.join(save_directory, f'{player_name}Merge3.png'))
@@ -132,8 +163,13 @@ def merge4(players):
         player_merge3 = player['Name'].replace(" ", "") + "Merge3.png"
         player_merge1 = player['Name'].replace(" ", "") + "Merge1.png"
 
+<<<<<<< HEAD
         directory_merge3 = "../Data/Images/Merge3/" + player_merge3
         directory_merge1 = "../Data/Images/Merge1/" + player_merge1
+=======
+        directory_merge3 = "/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/Merge3/" + player_merge3
+        directory_merge1 = "/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/Merge1/" + player_merge1
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
 
         image_merge3 = Image.open(directory_merge3)
         image_merge1 = Image.open(directory_merge1)
@@ -149,7 +185,11 @@ def merge4(players):
         merged_image.paste(image_merge1_resized, (0, height_merge3))
 
         #save the card
+<<<<<<< HEAD
         save_directory = '../Data/Images/Cards'
+=======
+        save_directory = '/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/Cards'
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
         os.makedirs(save_directory, exist_ok=True)
         player_name = player['Name'].replace(" ", "")
         merged_image.save(os.path.join(save_directory, f'{player_name}Card.png'))
@@ -163,7 +203,11 @@ def merge4(players):
 def round_corners(players):
     for index, player in players.iterrows():
         player_card = player['Name'].replace(" ", "") + "Card.png"
+<<<<<<< HEAD
         directory_card = "../Data/Images/Cards/"+player_card
+=======
+        directory_card = "/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/Cards/"+player_card
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
         image_card = Image.open(directory_card)
 
         rad = 50
@@ -179,7 +223,11 @@ def round_corners(players):
         image_card.putalpha(alpha)
 
         #save the rounded image
+<<<<<<< HEAD
         save_directory = '../Data/Images/Cards'
+=======
+        save_directory = '/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/Cards'
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
         os.makedirs(save_directory, exist_ok=True)
         player_name = player['Name'].replace(" ", "")
         image_card.save(os.path.join(save_directory, f'{player_name}Card.png'))
@@ -193,7 +241,11 @@ def round_corners(players):
 def add_margin(players):
     for index, player in players.iterrows():
         player_card = player['Name'].replace(" ", "") + "Card.png"
+<<<<<<< HEAD
         directory_card = "../Data/Images/Cards/"+player_card
+=======
+        directory_card = "/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/Cards/"+player_card
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
         image_card = Image.open(directory_card).convert("RGBA")
 
         margin_size = 10
@@ -210,7 +262,11 @@ def add_margin(players):
         new_image.paste(image_card, (margin_size, margin_size), mask=image_card)
 
         #save with the margin
+<<<<<<< HEAD
         save_directory = '../Data/Images/Cards'
+=======
+        save_directory = '/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Images/Cards'
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
         os.makedirs(save_directory, exist_ok=True)
         player_name = player['Name'].replace(" ", "")
         output_filename = os.path.join(save_directory, f'{player_name}Card.png')

@@ -3274,10 +3274,17 @@ goalkeepers <- goalkeepers[!is.na(goalkeepers$Player_KEEPER), ]
 
 
 #convert to a csv file the final dataframe for the outfield players
+<<<<<<< HEAD
 write.csv(outfieldplayers, "../Data/Dataframes/outfieldplayers.csv", row.names=FALSE)
 
 #convert to a csv file the final dataframe for the goalkeepers
 write.csv(goalkeepers, "../Data/Dataframes/goalkeepers.csv", row.names=FALSE)
+=======
+write.csv(outfieldplayers, "/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Dataframes/outfieldplayers.csv", row.names=FALSE)
+
+#convert to a csv file the final dataframe for the goalkeepers
+write.csv(goalkeepers, "/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Dataframes/goalkeepers.csv", row.names=FALSE)
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
 
 #end time
 end_time <- Sys.time()

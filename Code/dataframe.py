@@ -30,7 +30,11 @@ def simple_export(df, fileName):
 
 
 #our dataframe with all information, for the oufield players
+<<<<<<< HEAD
 outfieldplayers = pd.read_csv('../Data/Dataframes/outfieldplayers.csv')
+=======
+outfieldplayers = pd.read_csv('/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Dataframes/outfieldplayers.csv')
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
 
 #we only want to keep the essential columns
 selected_columns = [
@@ -246,7 +250,11 @@ for column in columns_to_add:
 
 
 #our dataframe with all information, for the goalkeepers
+<<<<<<< HEAD
 goalkeepers = pd.read_csv('../Data/Dataframes/goalkeepers.csv', sep=',', low_memory=False)
+=======
+goalkeepers = pd.read_csv('/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Dataframes/goalkeepers.csv', sep=',', low_memory=False)
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
 
 #we only want to keep the essential columns
 selected_columns = [
@@ -302,7 +310,11 @@ new_goalkeepers['Goal-Defending'] = round(new_goalkeepers['Goal-Defending'].rank
 #concatenat the dataframes for the oufield players and goalkeepers
 players = pd.concat([new_outfieldplayers, new_goalkeepers])
 
+<<<<<<< HEAD
 #simple_export(players, '../Data/Dataframes/players.csv')
+=======
+#simple_export(players, '/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Dataframes/players.csv')
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
 
 
 #DATA CLEANING-----------------------------------------------------------------------------#
@@ -390,7 +402,11 @@ players['Exiting'] = players['Exiting'].astype('Int64')
 players['Shot-Defending'] = players['Shot-Defending'].astype('Int64')
 players['Goal-Defending'] = players['Goal-Defending'].astype('Int64')
 
+<<<<<<< HEAD
 #simple_export(players, '../Data/Dataframes/players.csv')
+=======
+#simple_export(players, '/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Dataframes/players.csv')
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
 
 
 #RATING CALCULATION------------------------------------------------------------------------#
@@ -552,7 +568,11 @@ i = 0
 for i in range(len(new_rating)):
     players.at[players.index[i], 'Rating'] = new_rating[i]
 
+<<<<<<< HEAD
 #simple_export(players, '../Data/Dataframes/players.csv')
+=======
+#simple_export(players, '/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Dataframes/players.csv')
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
 
 
 #ROLE CALCULATION--------------------------------------------------------------------------#
@@ -696,7 +716,11 @@ def calculate_role(players):
 
 calculate_role(players)
 
+<<<<<<< HEAD
 #simple_export(players, '../Data/Dataframes/players.csv')
+=======
+#simple_export(players, '/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Dataframes/players.csv')
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
 
 
 #TOUCHES FOR THE HEATMAP PLOT--------------------------------------------------------------#
@@ -731,7 +755,11 @@ players['3rd'] = players['3rd'].astype('Int64').astype(str).replace(['nan', '<NA
 players['4th'] = players['4th'].astype('Int64').astype(str).replace(['nan', '<NA>'], 'N/A')
 players['5th'] = players['5th'].astype('Int64').astype(str).replace(['nan', '<NA>'], 'N/A')
 
+<<<<<<< HEAD
 #simple_export(players, '../Data/Dataframes/players.csv')
+=======
+#simple_export(players, '/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Dataframes/players.csv')
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
 
 
 #ADD IMAGE LINK----------------------------------------------------------------------------#
@@ -762,7 +790,11 @@ players.update(centre_backs)
 #CONCLUSION--------------------------------------------------------------------------------#
 
 
+<<<<<<< HEAD
 simple_export(players, '../Data/Dataframes/players.csv')
+=======
+simple_export(players, '/Users/pedroalexleite/Desktop/Football-Players-Database/Data/Dataframes/players.csv')
+>>>>>>> c36c8515aed044de12ec29746ce26897464abde4
 
 end_time = time.time()
 print("dataframe.py took", int((end_time-start_time)/60), "minutes!")
