@@ -6,6 +6,8 @@ An automated football player scouting and rating system that combines performanc
 ![Python](https://img.shields.io/badge/Python-3.8+-green.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
+<img width="2933" height="2523" alt="FranciscoConceiçãoCard" src="https://github.com/user-attachments/assets/64075ca2-3b1e-4998-a328-0493ae7da2b2" />
+
 ## 🎯 TL;DR
 
 A comprehensive database system that:
